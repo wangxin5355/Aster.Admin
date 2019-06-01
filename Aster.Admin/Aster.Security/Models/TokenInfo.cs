@@ -13,6 +13,11 @@ namespace Aster.Security.Models
             DisplyName = user.DisplayName;
         }
 
+        public TokenInfo()
+        {
+
+        }
+
         public string PackType { get; set; }
 
         public bool IsAdmin { get; set; }

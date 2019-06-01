@@ -11,10 +11,7 @@ namespace Aster.Entities
         /// </summary>
         public enum IsDeleted
         {
-            /// <summary>
-            /// 所有
-            /// </summary>
-            All=-1,
+
             /// <summary>
             /// 否
             /// </summary>
@@ -61,10 +58,7 @@ namespace Aster.Entities
         /// </summary>
         public enum Status
         {
-            /// <summary>
-            /// 未指定
-            /// </summary>
-            All = -1,
+
             /// <summary>
             /// 已禁用
             /// </summary>
@@ -95,10 +89,6 @@ namespace Aster.Entities
         /// </summary>
         public enum YesOrNo
         {
-            /// <summary>
-            /// 所有
-            /// </summary>
-            All = -1,
             /// <summary>
             /// 否
             /// </summary>

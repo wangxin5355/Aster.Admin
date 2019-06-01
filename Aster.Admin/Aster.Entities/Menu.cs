@@ -3,6 +3,7 @@ using Aster.Common.Data.Core.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using static Aster.Entities.CommonEnum;
 
 namespace Aster.Entities
 {
@@ -27,7 +28,7 @@ namespace Aster.Entities
 
         public string Description { get; set; }
 
-        public int Status { get; set; }
+        public Status Status { get; set; }
 
 
         public bool IsDeleted { get; set; }

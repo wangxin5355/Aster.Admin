@@ -4,6 +4,23 @@
         <name>Aster.Admin.API</name>
     </assembly>
     <members>
+        <member name="T:DncZeus.Api.Controllers.AccountController">
+            <summary>
+            获取账号权限相关的
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.AccountController.#ctor(Aster.Services.IAccountService)">
+            <summary>
+            
+            </summary>
+            <param name="accountService"></param>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.AccountController.Profile">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:DncZeus.Api.Controllers.OauthController">
             <summary>
             
@@ -16,6 +33,357 @@
             <param name="username"></param>
             <param name="password"></param>
             <param name="packType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Aster.Admin.API.Controllers.Api.V1.Rbac.IconController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.IconController.List(Aster.Services.ViewModels.Icon.IconSearchViewModel,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.IconController.FindByKeyword(System.String)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.IconController.Create(Aster.Services.ViewModels.Icon.IconCreateViewModel)">
+            <summary>
+            创建图标
+            </summary>
+            <param name="model">图标视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.IconController.Edit(System.Int32)">
+            <summary>
+            编辑图标
+            </summary>
+            <param name="id">图标ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.IconController.Edit(Aster.Services.ViewModels.Icon.IconCreateViewModel)">
+            <summary>
+            保存编辑后的图标信息
+            </summary>
+            <param name="model">图标视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.IconController.Delete(System.String)">
+            <summary>
+            删除图标
+            </summary>
+            <param name="ids">图标ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.IconController.Recover(System.String)">
+            <summary>
+            恢复图标
+            </summary>
+            <param name="ids">图标ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.IconController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">图标ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.IconController.Import(Aster.Services.ViewModels.Icon.IconImportViewModel)">
+            <summary>
+            创建图标
+            </summary>
+            <param name="model">多行图标视图</param>
+            <returns></returns>
+        </member>
+        <member name="T:Aster.Admin.API.Controllers.Api.V1.Rbac.MenuController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.MenuController.List(Aster.Services.ViewModels.Menu.MenuSearchViewModel,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.MenuController.Create(Aster.Services.ViewModels.Menu.MenuCreateViewModel)">
+            <summary>
+            创建菜单
+            </summary>
+            <param name="model">菜单视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.MenuController.Edit(System.Guid)">
+            <summary>
+            编辑菜单
+            </summary>
+            <param name="guid">菜单ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.MenuController.Edit(Aster.Services.ViewModels.Menu.MenuEditViewModel)">
+            <summary>
+            保存编辑后的菜单信息
+            </summary>
+            <param name="model">菜单视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.MenuController.Tree(System.String)">
+            <summary>
+            菜单树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.MenuController.Delete(System.String)">
+            <summary>
+            删除菜单
+            </summary>
+            <param name="ids">菜单ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.MenuController.Recover(System.String)">
+            <summary>
+            恢复菜单
+            </summary>
+            <param name="ids">菜单ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.MenuController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">菜单ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="T:Aster.Admin.API.Controllers.Api.V1.Rbac.MenuTreeHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.MenuTreeHelper.BuildTree(System.Collections.Generic.List{Aster.Services.ViewModels.Menu.MenuTree},System.String)">
+            <summary>
+            
+            </summary>
+            <param name="menus"></param>
+            <param name="selectedGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Aster.Admin.API.Controllers.Api.V1.Rbac.PermissionController">
+            <summary>
+            权限控制器
+            </summary>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.PermissionController.#ctor">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.PermissionController.List(Aster.Services.ViewModels.Menu.MenuSearchViewModel,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.PermissionController.Create(Aster.Services.ViewModels.Permission.PermissionCreateViewModel)">
+            <summary>
+            创建权限
+            </summary>
+            <param name="model">权限视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.PermissionController.Edit(System.String)">
+            <summary>
+            编辑权限
+            </summary>
+            <param name="code">权限惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.PermissionController.Edit(Aster.Services.ViewModels.Permission.PermissionEditViewModel)">
+            <summary>
+            保存编辑后的权限信息
+            </summary>
+            <param name="model">权限视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.PermissionController.Delete(System.String)">
+            <summary>
+            删除权限
+            </summary>
+            <param name="ids">权限ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.PermissionController.Recover(System.String)">
+            <summary>
+            恢复权限
+            </summary>
+            <param name="ids">权限ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.PermissionController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">权限ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.PermissionController.PermissionTree(System.String)">
+            <summary>
+            角色-权限菜单树
+            </summary>
+            <param name="code">角色编码</param>
+            <returns></returns>
+        </member>
+        <member name="T:Aster.Admin.API.Controllers.Api.V1.Rbac.PermissionTreeHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.Rbac.PermissionTreeHelper.FillRecursive(System.Collections.Generic.List{Aster.Services.ViewModels.Permission.PermissionMenuTree},System.Collections.Generic.List{Aster.Entities.Models.PermissionWithAssignProperty},System.Nullable{System.Guid},System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="menus">菜单集合</param>
+            <param name="permissions">权限集合</param>
+            <param name="parentGuid">父级菜单GUID</param>
+            <param name="isSuperAdministrator">是否为超级管理员角色</param>
+            <returns></returns>
+        </member>
+        <member name="T:Aster.Admin.API.Controllers.Api.V1.RoleController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.RoleController.List(Aster.Services.ViewModels.Role.RoleSearchViewModel,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.RoleController.Create(Aster.Services.ViewModels.Role.RoleCreateViewModel)">
+            <summary>
+            创建角色
+            </summary>
+            <param name="model">角色视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.RoleController.Edit(Aster.Services.ViewModels.Role.RoleCreateViewModel)">
+            <summary>
+            保存编辑后的角色信息
+            </summary>
+            <param name="model">角色视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.RoleController.Delete(System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.RoleController.Recover(System.String)">
+            <summary>
+            恢复角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.RoleController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.RoleController.AssignPermission">
+            <summary>
+            为指定角色分配权限
+            </summary>
+            <param name="payload">角色分配权限的请求载体类</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.RoleController.FindListByUserGuid(System.Int32)">
+            <summary>
+            获取指定用户的角色列表
+            </summary>
+            <param name="userId">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.RoleController.FindSimpleList">
+            <summary>
+            查询所有角色列表(只包含主要的字段信息:name,code)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Aster.Admin.API.Controllers.Api.V1.UserController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.UserController.List(Aster.Services.ViewModels.User.UserSearchViewModel,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.UserController.Create(Aster.Services.ViewModels.User.UserCreateViewModel)">
+            <summary>
+            创建用户
+            </summary>
+            <param name="model">用户视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.UserController.Edit(System.Int32)">
+            <summary>
+            编辑用户
+            </summary>
+            <param name="guid">用户GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.UserController.Edit(Aster.Services.ViewModels.User.UserEditViewModel)">
+            <summary>
+            保存编辑后的用户信息
+            </summary>
+            <param name="model">用户视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.UserController.Delete(System.String)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="ids">用户GUID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.UserController.Recover(System.String)">
+            <summary>
+            恢复用户
+            </summary>
+            <param name="ids">用户GUID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.UserController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">用户ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Aster.Admin.API.Controllers.Api.V1.UserController.SaveRoles(Aster.Services.ViewModels.User.SaveUserRolesViewModel)">
+            <summary>
+            保存用户-角色的关系映射数据
+            </summary>
+            <param name="model"></param>
             <returns></returns>
         </member>
         <member name="T:Aster.Admin.API.Models.Menu.Router">
@@ -111,966 +479,6 @@
             </summary>
             <param name="data"></param>
             <param name="totalCount"></param>
-        </member>
-        <member name="T:Aster.Admin.API.ViewModels.Icon.IconCreateViewModel">
-            <summary>
-            图标的视图类(创建/编辑)
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconCreateViewModel.Id">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconCreateViewModel.Code">
-            <summary>
-            图标名称
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconCreateViewModel.Size">
-            <summary>
-            图标的大小，单位是 px
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconCreateViewModel.Color">
-            <summary>
-            图标颜色
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconCreateViewModel.Custom">
-            <summary>
-            自定义图标
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconCreateViewModel.Description">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconCreateViewModel.Status">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconCreateViewModel.IsDeleted">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="T:Aster.Admin.API.ViewModels.Icon.IconImportViewModel">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconImportViewModel.Icons">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="T:Aster.Admin.API.ViewModels.Icon.IconJsonModel">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconJsonModel.Id">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconJsonModel.Code">
-            <summary>
-            图标名称
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconJsonModel.Size">
-            <summary>
-            图标的大小，单位是 px
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconJsonModel.Color">
-            <summary>
-            图标颜色
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconJsonModel.Custom">
-            <summary>
-            自定义图标
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconJsonModel.Description">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconJsonModel.Status">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconJsonModel.IsDeleted">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconJsonModel.CreatedOn">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconJsonModel.CreatedByUserGuid">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconJsonModel.CreatedByUserName">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconJsonModel.ModifiedOn">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconJsonModel.ModifiedByUserGuid">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Icon.IconJsonModel.ModifiedByUserName">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="T:Aster.Admin.API.ViewModels.Menu.MenuCreateViewModel">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuCreateViewModel.Name">
-            <summary>
-            菜单名称
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuCreateViewModel.Url">
-            <summary>
-            链接地址
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuCreateViewModel.Alias">
-            <summary>
-            页面别名
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuCreateViewModel.Icon">
-            <summary>
-            菜单图标(可选)
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuCreateViewModel.ParentGuid">
-            <summary>
-            父级GUID
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuCreateViewModel.ParentName">
-            <summary>
-            上级菜单名称
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuCreateViewModel.Level">
-            <summary>
-            菜单层级深度
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuCreateViewModel.Description">
-            <summary>
-            描述信息
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuCreateViewModel.Sort">
-            <summary>
-            排序
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuCreateViewModel.Status">
-            <summary>
-            是否可用(0:禁用,1:可用)
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuCreateViewModel.IsDeleted">
-            <summary>
-            是否已删
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuCreateViewModel.IsDefaultRouter">
-            <summary>
-            是否为默认路由
-            </summary>
-        </member>
-        <member name="T:Aster.Admin.API.ViewModels.Menu.MenuEditViewModel">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuEditViewModel.Guid">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuEditViewModel.Name">
-            <summary>
-            菜单名称
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuEditViewModel.Url">
-            <summary>
-            链接地址
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuEditViewModel.Alias">
-            <summary>
-            页面别名
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuEditViewModel.Icon">
-            <summary>
-            菜单图标(可选)
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuEditViewModel.ParentGuid">
-            <summary>
-            父级GUID
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuEditViewModel.ParentName">
-            <summary>
-            上级菜单名称
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuEditViewModel.Level">
-            <summary>
-            菜单层级深度
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuEditViewModel.Description">
-            <summary>
-            描述信息
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuEditViewModel.Sort">
-            <summary>
-            排序
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuEditViewModel.Status">
-            <summary>
-            是否可用(0:禁用,1:可用)
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuEditViewModel.IsDeleted">
-            <summary>
-            是否已删
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuEditViewModel.IsDefaultRouter">
-            <summary>
-            是否为默认路由
-            </summary>
-        </member>
-        <member name="T:Aster.Admin.API.ViewModels.Menu.MenuJsonModel">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuJsonModel.Guid">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuJsonModel.Name">
-            <summary>
-            菜单名称
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuJsonModel.Url">
-            <summary>
-            链接地址
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuJsonModel.Alias">
-            <summary>
-            页面别名
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuJsonModel.Icon">
-            <summary>
-            菜单图标(可选)
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuJsonModel.ParentGuid">
-            <summary>
-            父级GUID
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuJsonModel.ParentName">
-            <summary>
-            上级菜单名称
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuJsonModel.Level">
-            <summary>
-            菜单层级深度
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuJsonModel.Description">
-            <summary>
-            描述信息
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuJsonModel.Sort">
-            <summary>
-            排序
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuJsonModel.Status">
-            <summary>
-            是否可用(0:禁用,1:可用)
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuJsonModel.IsDefaultRouter">
-            <summary>
-            是否为默认路由
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuJsonModel.IsDeleted">
-            <summary>
-            是否已删
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuJsonModel.CreatedOn">
-            <summary>
-            创建时间
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuJsonModel.CreatedByUserGuid">
-            <summary>
-            创建者ID
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuJsonModel.CreatedByUserName">
-            <summary>
-            创建者姓名
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuJsonModel.ModifiedOn">
-            <summary>
-            最近修改时间
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuJsonModel.ModifiedByUserGuid">
-            <summary>
-            最近修改者ID
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuJsonModel.ModifiedByUserName">
-            <summary>
-            最近修改者姓名
-            </summary>
-        </member>
-        <member name="T:Aster.Admin.API.ViewModels.Menu.MenuTree">
-            <summary>
-            用于iview的菜单树
-            </summary>
-        </member>
-        <member name="M:Aster.Admin.API.ViewModels.Menu.MenuTree.#ctor">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuTree.Guid">
-            <summary>
-            GUID
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuTree.ParentGuid">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuTree.Title">
-            <summary>
-            标题(菜单名称)
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuTree.Expand">
-            <summary>
-            是否展开子节点
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuTree.Disabled">
-            <summary>
-            禁掉响应
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuTree.DisableCheckbox">
-            <summary>
-            禁掉 checkbox
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuTree.Selected">
-            <summary>
-            是否选中子节点	
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuTree.Checked">
-            <summary>
-            是否勾选(如果勾选，子节点也会全部勾选)
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Menu.MenuTree.Children">
-            <summary>
-            子节点属性数组
-            </summary>
-        </member>
-        <member name="T:Aster.Admin.API.ViewModels.Permission.PermissionCreateViewModel">
-            <summary>
-            权限实体类
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionCreateViewModel.Code">
-            <summary>
-            权限编码
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionCreateViewModel.MenuGuid">
-            <summary>
-            菜单GUID
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionCreateViewModel.Name">
-            <summary>
-            权限名称
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionCreateViewModel.ActionCode">
-            <summary>
-            权限操作码
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionCreateViewModel.Icon">
-            <summary>
-            图标(可选)
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionCreateViewModel.Description">
-            <summary>
-            描述信息
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionCreateViewModel.Status">
-            <summary>
-            状态
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionCreateViewModel.IsDeleted">
-            <summary>
-            是否已删
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionCreateViewModel.Type">
-            <summary>
-            权限类型(0:菜单,1:按钮/操作/功能等)
-            </summary>
-        </member>
-        <member name="T:Aster.Admin.API.ViewModels.Permission.PermissionEditViewModel">
-            <summary>
-            权限实体类
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionEditViewModel.Code">
-            <summary>
-            权限编码
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionEditViewModel.MenuGuid">
-            <summary>
-            菜单GUID
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionEditViewModel.MenuName">
-            <summary>
-            菜单名称
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionEditViewModel.Name">
-            <summary>
-            权限名称
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionEditViewModel.ActionCode">
-            <summary>
-            权限操作码
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionEditViewModel.Icon">
-            <summary>
-            图标(可选)
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionEditViewModel.Description">
-            <summary>
-            描述信息
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionEditViewModel.Status">
-            <summary>
-            状态
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionEditViewModel.IsDeleted">
-            <summary>
-            是否已删
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionEditViewModel.Type">
-            <summary>
-            权限类型(0:菜单,1:按钮/操作/功能等)
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionEditViewModel.CreatedOn">
-            <summary>
-            创建时间
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionEditViewModel.CreatedByUserId">
-            <summary>
-            创建者ID
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionEditViewModel.CreatedByUserName">
-            <summary>
-            创建者姓名
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionEditViewModel.ModifiedOn">
-            <summary>
-            最近修改时间
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionEditViewModel.ModifiedByUserId">
-            <summary>
-            最近修改者ID
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionEditViewModel.ModifiedByUserName">
-            <summary>
-            最近修改者
-            </summary>
-        </member>
-        <member name="T:Aster.Admin.API.ViewModels.Permission.PermissionJsonModel">
-            <summary>
-            权限实体类
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionJsonModel.Code">
-            <summary>
-            权限编码
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionJsonModel.MenuGuid">
-            <summary>
-            菜单GUID
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionJsonModel.MenuName">
-            <summary>
-            菜单名称
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionJsonModel.Name">
-            <summary>
-            权限名称
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionJsonModel.ActionCode">
-            <summary>
-            权限操作码
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionJsonModel.Icon">
-            <summary>
-            图标(可选)
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionJsonModel.Description">
-            <summary>
-            描述信息
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionJsonModel.Status">
-            <summary>
-            状态
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionJsonModel.IsDeleted">
-            <summary>
-            是否已删
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionJsonModel.Type">
-            <summary>
-            权限类型(0:菜单,1:按钮/操作/功能等)
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionJsonModel.CreatedOn">
-            <summary>
-            创建时间
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionJsonModel.CreatedByUserId">
-            <summary>
-            创建者ID
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionJsonModel.CreatedByUserName">
-            <summary>
-            创建者姓名
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionJsonModel.ModifiedOn">
-            <summary>
-            最近修改时间
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionJsonModel.ModifiedByUserId">
-            <summary>
-            最近修改者ID
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionJsonModel.ModifiedByUserName">
-            <summary>
-            最近修改者
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionJsonModel.PermissionTypeText">
-            <summary>
-            权限类型的显示文本
-            </summary>
-        </member>
-        <member name="T:Aster.Admin.API.ViewModels.Permission.PermissionMenuTree">
-            <summary>
-            用于角色权限的菜单树
-            </summary>
-        </member>
-        <member name="M:Aster.Admin.API.ViewModels.Permission.PermissionMenuTree.#ctor">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionMenuTree.Guid">
-            <summary>
-            GUID
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionMenuTree.ParentGuid">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionMenuTree.Title">
-            <summary>
-            标题(菜单名称)
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionMenuTree.Expand">
-            <summary>
-            是否展开子节点
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionMenuTree.Disabled">
-            <summary>
-            禁掉响应
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionMenuTree.DisableCheckbox">
-            <summary>
-            禁掉 checkbox
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionMenuTree.Selected">
-            <summary>
-            是否选中子节点	
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionMenuTree.Checked">
-            <summary>
-            是否勾选(如果勾选，子节点也会全部勾选)
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionMenuTree.AllAssigned">
-            <summary>
-            当前菜单的所有权限都已分配到指定角色
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionMenuTree.Permissions">
-            <summary>
-            当前菜单拥有的权限功能
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionMenuTree.Children">
-            <summary>
-            子节点属性数组
-            </summary>
-        </member>
-        <member name="T:Aster.Admin.API.ViewModels.Permission.PermissionElement">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionElement.Code">
-            <summary>
-            权限编码
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionElement.Name">
-            <summary>
-            权限名称
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Permission.PermissionElement.IsAssignedToRole">
-            <summary>
-            是否已分配到指定角色
-            </summary>
-        </member>
-        <member name="T:Aster.Admin.API.ViewModels.DncRole.RoleCreateViewModel">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.DncRole.RoleCreateViewModel.IsSuperAdministrator">
-            <summary>
-            是否是超级管理员(超级管理员拥有系统的所有权限)
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.DncRole.RoleCreateViewModel.IsBuiltin">
-            <summary>
-            是否是系统内置角色(系统内置角色不允许删除,修改操作)
-            </summary>
-        </member>
-        <member name="T:Aster.Admin.API.ViewModels.Role.RoleJsonModel">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Role.RoleJsonModel.IsSuperAdministrator">
-            <summary>
-            是否是超级管理员(超级管理员拥有系统的所有权限)
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.Role.RoleJsonModel.IsBuiltin">
-            <summary>
-            是否是系统内置角色(系统内置角色不允许删除,修改操作)
-            </summary>
-        </member>
-        <member name="T:Aster.Admin.API.ViewModels.User.SaveUserRolesViewModel">
-            <summary>
-            用户获得的角色实体对象
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.SaveUserRolesViewModel.UserGuid">
-            <summary>
-            用户GUID
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.SaveUserRolesViewModel.AssignedRoles">
-            <summary>
-            已获得的角色代码集合
-            </summary>
-        </member>
-        <member name="T:Aster.Admin.API.ViewModels.User.UserCreateViewModel">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserCreateViewModel.LoginName">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserCreateViewModel.DisplayName">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserCreateViewModel.Password">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserCreateViewModel.Avatar">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserCreateViewModel.UserType">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserCreateViewModel.IsLocked">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserCreateViewModel.Status">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserCreateViewModel.IsDeleted">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserCreateViewModel.Description">
-            <summary>
-            用户描述信息
-            </summary>
-        </member>
-        <member name="T:Aster.Admin.API.ViewModels.User.UserEditViewModel">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserEditViewModel.Guid">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserEditViewModel.LoginName">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserEditViewModel.DisplayName">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserEditViewModel.Password">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserEditViewModel.Avatar">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserEditViewModel.UserType">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserEditViewModel.IsLocked">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserEditViewModel.Status">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserEditViewModel.IsDeleted">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserEditViewModel.Description">
-            <summary>
-            用户描述信息
-            </summary>
-        </member>
-        <member name="T:Aster.Admin.API.ViewModels.User.UserJsonModel">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserJsonModel.Guid">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserJsonModel.LoginName">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserJsonModel.DisplayName">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserJsonModel.Password">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserJsonModel.Avatar">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserJsonModel.UserType">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserJsonModel.IsLocked">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserJsonModel.Status">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserJsonModel.IsDeleted">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserJsonModel.CreatedOn">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserJsonModel.CreatedByUserGuid">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserJsonModel.CreatedByUserName">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserJsonModel.ModifiedOn">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserJsonModel.ModifiedByUserGuid">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Aster.Admin.API.ViewModels.User.UserJsonModel.ModifiedByUserName">
-            <summary>
-            
-            </summary>
         </member>
     </members>
 </doc>

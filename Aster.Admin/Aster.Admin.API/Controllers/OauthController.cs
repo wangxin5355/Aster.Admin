@@ -6,8 +6,7 @@ using System.Security.Claims;
 using Aster.Services;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using Aster.Admin.API.ViewModels.Icon;
-using Aster.Admin.API.ViewModels.Menu;
+
 
 namespace DncZeus.Api.Controllers
 {
@@ -47,24 +46,18 @@ namespace DncZeus.Api.Controllers
         public IActionResult Values()
         {
             var value = new { vaulue1 = 1, vulue2 = 2 };
+            var user = User;
             return Ok(value);
         }
 
         [HttpGet]
         [AllowAnonymous]
-        public IActionResult ValuesA(IconCreateViewModel x)
+        public IActionResult ValuesA()
         {
             var value = new { vaulue1 = 1, vulue2 = 2 };
+            var user = User;
             return Ok(value);
         }
 
-
-        [HttpGet]
-        [AllowAnonymous]
-        public IActionResult ValuesB()
-        {
-            MenuCreateViewModel menuCreateViewModel = new MenuCreateViewModel();
-            return Ok(menuCreateViewModel);
-        }
     }
 }

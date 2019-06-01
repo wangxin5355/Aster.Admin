@@ -11,7 +11,6 @@ using Aster.Common.Data;
 using Aster.Common.Filter;
 using Aster.Localizations;
 using Aster.Security;
-using Aster.Security.AuthContext;
 using Aster.Security.Models;
 using Aster.Services;
 using Microsoft.AspNetCore.Builder;
@@ -40,7 +39,6 @@ namespace Aster.Admin.API
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors(o =>
@@ -51,10 +49,9 @@ namespace Aster.Admin.API
                     .AllowAnyOrigin()
                     .AllowCredentials()
             ));
-            //services.AddHttpContextAccessor();
-            //services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             var appSettingsSection = Configuration.GetSection("TokenOptions");
-            services.Configure<AppAuthenticationSettings>(appSettingsSection);
+            //security
+            services.AddSecurity((opts) => appSettingsSection.Bind(opts));//权限认证注入
             services.AddDistributedRedisCache(Configuration);
             services.AddLocalizationOption(opts => Configuration.GetSection("Localization").Bind(opts));
             services.AddSqlStringLocalizer(opts => Configuration.GetSection("Localization").Bind(opts));
@@ -67,18 +64,15 @@ namespace Aster.Admin.API
             services.Configure<WebEncoderOptions>(options =>
                options.TextEncoderSettings = new TextEncoderSettings(UnicodeRanges.BasicLatin, UnicodeRanges.CjkUnifiedIdeographs)
            );
-
-
             services.AddMvc(options => 
              {
-                 //options.Filters.Add(typeof(AuthorizationFilter));
-                 options.Filters.Add(typeof(MyExceptionFilter));
+                 options.Filters.Add(typeof(AuthorizationFilter));//鉴权拦截
+                 options.Filters.Add(typeof(MyExceptionFilter));//异常拦截
 
              }).AddJsonOptions(options =>
              { 
                  options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
               }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "Aster通用权限API", Version = "v1" });
@@ -118,29 +112,13 @@ namespace Aster.Admin.API
             }
             app.UseStaticFiles();
             app.UseFileServer();
-            app.UseAuthentication();
+            
             app.UseCors("*");
-            app.ConfigureCustomExceptionMiddleware();
-
-            //var serviceProvider = app.ApplicationServices;
-            //var httpContextAccessor = serviceProvider.GetRequiredService<IHttpContextAccessor>();
-            //AuthContextService.Configure(httpContextAccessor);
+            //app.UseAuthentication(); net自带
+            app.UseSecurity();//自定义权限验证
+            app.UseMiddleware<ApiRequestLogMiddlerware>();
             app.UseHttpsRedirection();
-            app.UseMvc(routes =>
-            {
-
-                routes.MapRoute(
-                     name: "areaRoute",
-                     template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
-
-                routes.MapRoute(
-                    name: "apiDefault",
-                    template: "api/{controller=Home}/{action=Index}/{id?}");
-
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
+            app.UseMvc();
 
             app.UseSwagger(o =>
             {

@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\Api\" />
+    <Folder Include="AOP\" />
   </ItemGroup>
 
 </Project>
